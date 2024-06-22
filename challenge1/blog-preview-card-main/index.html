@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Blog preview card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @font-face {
+      font-family: 'Figtree-bold';
+      src: url('assets/fonts/static/Figtree-ExtraBold.ttf') format('truetype');
+      font-weight: 100; /* Extra Bold */
+    }
+  
+    @font-face {
+      font-family: 'Figtree';
+      src: url('assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+      font-weight: 100; /* Semi Bold */
+    }
+
+    body{
+      background-color: #F4D04E;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Figtree', sans-serif;
+    }
+
+    .block{
+      display: block;
+    }
+
+    .flex{
+      display: flex;
+    }
+
+    .mx-500{
+      margin: 200px  200px 200px;
+    }
+
+    .footer{
+      position: absolute;
+      bottom: 0;
+    }
+
+    .width-div{
+      width:300px;
+    }
+
+    .bg-white{
+      background-color: white;
+    }
+
+    .items-align{
+      align-items: center;
+    }
+
+    .border{
+      border: 1px solid #000000;
+      border-radius: 20px;
+      border: 1px solid #000000;
+      box-shadow: 5px 5px  #000000;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .border:hover {
+      box-shadow: 10px 10px  #000000;
+
+    }
+
+    .py-8{
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .p-24{
+      padding: 24px;
+    }
+
+    .justify-between{
+      justify-content: space-between;
+   }
+
+  .m-10{
+    margin-right: 10px;
+  }
+
+  .mt-20{
+    margin-top: 20px;
+  }
+
+  .card-title{
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Figtree-bold', sans-serif;
+  }
+
+  .card-title:visited{
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .card-title:hover{
+    text-decoration: none;
+    color: #F4D04E;
+  }
+
+  .button-style{
+    font-size: 14px;
+    background-color: #F4D04E;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    font-family: 'Figtree-bold', sans-serif;
+  }
+
+  @media (max-width: 300px) {
+    .width-div {
+        width: 80%; /* reduce width on mobile */
+    }
+
+  .text-gray{
+    color: #7F7F7F;
+  }
+
+  .p-tb-10{
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+    
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="mx-500 width-div bg-white items-align border p-24">
+    <img src="assets/images/illustration-article.svg" alt="" class="width-div" style="border-radius: 10px;">
+
+    <div class="mt-20">
+      <button disabled  class="block button-style p-tb-10">Learning</button>
+
+      <p style="font-size: 14px; font-family: 'Figtree', sans-serif; font-weight:900;" class="p-tb-10">Published 21 Dec 2023</p> 
+
+      <div class="p-tb-10">
+        <a href="" class="card-title">HTML & CSS foundations</a>
+      </div> 
+
+      <p style="font-size: 16px; color: #7F7F7F" class="p-tb-10">
+        These languages are the backbone of every website, defining structure, content, and presentation.
+      </p> 
+
+      <div class="flex items-align">
+        <img src="assets/images/user.svg" alt="" class="m-10">
+        <span style="align-items: center; font-family:'Figtree-bold', sans-serif">Greg Hooper</span>
+      </div>
+    </div>
+    
+      
+    
+  </div>
+  
+  
+  <!-- <div class="footer" >
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
