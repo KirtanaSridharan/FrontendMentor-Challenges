@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | FAQ accordion</title>
+  <style>
+
+    :root {
+      --font-weight-normal: 400;
+      --font-weight-semibold: 600;
+      --font-weight-bold: 700;
+      /* Add more weights as needed */
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-image: url('assets/images/background-pattern-desktop.svg');
+      background-repeat: no-repeat; /* Ensure the background covers the entire viewport */
+      background-color: hsl(277, 72%, 94%);
+      justify-content: center;
+      align-items: center;
+      display:flex;
+      flex-direction: column;
+      color: hsl(292, 42%, 14%);
+      font-family: 'Work Sans', sans-serif;
+      place-content: center;
+      padding: 10px; /* Add padding to prevent content from touching the edges */
+    }
+
+    .work-sans-normal {
+      font-family: "Work Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    .work-sans-semibold {
+      font-family: "Work Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+    }
+    
+    .work-sans-bold {
+      font-family: "Work Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .footer{
+      margin-top: auto;
+    }
+
+    .bg-white{
+      background-color: white;
+    }
+
+    .items-align{
+      align-items: center;
+    }
+
+    .width-500{
+      width:500px;
+    }
+
+    .faq-section{ 
+      margin: auto;
+      padding: 30px;
+      top:0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 10px;
+    }
+
+    .faq-header {
+      display: flex;
+      align-items: center;
+  }
+  
+    .faq-header img {
+        height: 40px; 
+        margin-right: 20px; 
+    }
+    
+    .faq-header h1 {
+        font-size: 50px;
+        margin: 0;
+    }
+
+    .accordian{
+      margin-top: 20px;
+    }
+    .accordian-answers{
+      display: none;
+      transition: 0 0.3s ease-out, opacity 0.3s ease-out;
+      overflow: hidden;
+    }
+
+    .accordian-item{
+      margin:0;
+      padding: 5px;
+      transition: 0 200ms ease;
+    }
+
+    .accordian-questions{
+      display: flex;
+      align-items: center;
+      height: 30px;
+      justify-content: space-between;
+      font-size: 16px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .accordian-item.active .accordian-answers{
+      display: block;
+      opacity: 1;
+    }
+
+    .accordian-answers{
+      font-size: 14px;
+      color:hsl(292, 16%, 49%);
+      margin-top: 15px;
+      margin-bottom: 15px;
+      line-height: 1.6rem;
+      text-justify: inter-word;
+    }
+
+    .accordian-item:hover{
+      cursor: pointer;
+    }
+
+    .accordian-questions:hover, .accordian-questions.active{
+      color: hsl(290, 40%, 53%);
+    }
+
+    .toggle-btn{
+      border: none;
+      background-color: transparent;
+      display: inline-flex;
+      align-items: last baseline;
+    }
+    .toggle-btn:hover{
+      cursor: pointer;
+    }
+
+    hr{
+      background-color: hsl(275, 100%, 97%);
+      height: 1px;
+      border: none;
+    }
+
+    @media (max-width: 375px) {
+
+      body{
+          background-image: url('assets/images/background-pattern-mobile.svg'); 
+          background-repeat: no-repeat;
+        }
+
+      .faq-section{
+        width: 80%;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .footer{
+          margin-top: auto;
+        }
+      
+  }
+  </style>
+</head>
+<body class="work-sans-normal">
+
+  <div class="bg-white items-align width-500 faq-section">
+    <div class="faq-header">
+      <img src="assets/images/icon-star.svg" alt=""><h1 class="work-sans-bold">FAQs</h1> 
+    </div>
+
+
+    <div class="accordion" style="margin-top: 20px;">
+        <div class="accordian-item">
+          <div class="accordian-questions work-sans-semibold">
+            What is Frontend Mentor, and how will it help me?
+              <img src="assets/images/icon-plus.svg" class="toggle-btn" alt="">
+          </div>
+
+          <div class="accordian-answers">
+            Frontend Mentor offers realistic coding challenges to help developers improve their 
+            frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
+            all levels and ideal for portfolio building.
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="accordian-item">
+              <div class="accordian-questions work-sans-semibold">
+                Is Frontend Mentor free? <img src="assets/images/icon-plus.svg" class="toggle-btn" alt="">
+              </div>
+
+              <div class="accordian-answers">
+                Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
+                option providing access to a range of projects suitable for all skill levels.
+              </div>
+        </div>
+        
+        <hr>
+
+        <div class="accordian-item">
+            <div class="accordian-questions work-sans-semibold">
+              Can I use Frontend Mentor projects in my portfolio? <img src="assets/images/icon-plus.svg" class="toggle-btn" alt="">
+
+            </div>
+
+            <div class="accordian-answers">
+              Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+              way to showcase your skills to potential employers!
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="accordian-item">
+          <div class="accordian-questions work-sans-semibold">
+            How can I get help if I'm stuck on a Frontend Mentor challenge?<img src="assets/images/icon-plus.svg" class="toggle-btn" alt="">
+            </button>
+          </div>
+
+          <div class="accordian-answers">
+            The best place to get help is inside Frontend Mentor's Discord community. There's a help 
+          channel where you can ask questions and seek support from other community members.
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+    <div class="footer">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Kirtana Sridharan</a>.
+    </div>
+
+
+  
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.accordian-item');
+      
+        faqItems.forEach(item => {
+          const question = item.querySelector('.accordian-questions');
+          const answer = item.querySelector('.accordian-answers');
+      
+          const toggleAnswer = () => {
+            const toggleBtn = item.querySelector('.toggle-btn');
+      
+            if (answer.style.display === 'block') {
+              answer.style.display = 'none';
+              toggleBtn.src = 'assets/images/icon-plus.svg';
+            } else {
+              answer.style.display = 'block';
+              toggleBtn.src = 'assets/images/icon-minus.svg';
+            }
+          };
+      
+          question.addEventListener('click', toggleAnswer);
+          answer.addEventListener('click', toggleAnswer);
+        });
+      });
+      
+    
+    </script>
+
+</body>
+</html>
